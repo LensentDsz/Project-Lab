@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TimerScript : MonoBehaviour
 {
     public Text timertext;
+    public float count;
     private float startTime;
     private float stopTime;
     bool isRunning;
@@ -14,6 +15,7 @@ public class TimerScript : MonoBehaviour
     void Start()
     {
         Reset();
+        
     }
     public void StartTimer()
     {
@@ -34,6 +36,10 @@ public class TimerScript : MonoBehaviour
     public void Reset()
     {
         timertext.text = "00:00";
+        t = 0;
+        startTime = 0;
+        stopTime = 0;
+        count = 0;
     }
     // Update is called once per frame
     void Update()
